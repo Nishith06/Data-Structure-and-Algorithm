@@ -1,0 +1,14 @@
+#Sort the array using insertion sort
+
+class Solution:
+    #Function to sort the list using insertion sort algorithm.    
+    def insertionSort(self, alist, n):
+        for i in range(0,len(alist)):
+            temp = alist[i]
+            red = i-1
+            
+            while ((temp < alist[red]) and (red >= 0)):
+                alist[red+1] = alist[red]
+                red -= 1
+            alist[red+1] = temp
+        return alist
